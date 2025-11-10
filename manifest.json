@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Codeforces Tag Hider",
+  "version": "1.0",
+  "description": "Hide problem tags for a Codeforces problem ",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": [
+    "*://codeforces.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://codeforces.com/problemset/problem/*/*", "*://codeforces.com/contest/*/problem/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_title": "Codeforces Tag Hider",
+    "default_icon": "icon128.png"
+  }
+}
